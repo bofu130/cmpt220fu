@@ -23,8 +23,10 @@ public class Exercises4_26 {
         System.out.println(cents);
         
 		switch (cents.length()) {
-          case 1: cents += "0"; break;
-          case 2: cents = cents.substring(0,2); break;
+          case 1: cents += "0"; 
+		          break;
+          case 2: cents = cents.substring(0,2);
+          		  break;
           default:  cents += "00";
             }
         amount = Integer.parseInt(dollars +cents);

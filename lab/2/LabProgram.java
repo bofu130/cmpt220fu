@@ -17,7 +17,7 @@ public class LabProgram {
 	
 	System.out.print("homework and lab: ");
 	double homework = input.nextDouble();
-	
+	String grade = " ";
 	double gradeNum = ((midterm * 2 + finalGrade * 2 + projects * 2 + homework * 4) / 10);
 	if (gradeNum >= 95) {
       grade = "A";
@@ -48,10 +48,10 @@ public class LabProgram {
 	}
 	else if (gradeNum < 65 && gradeNum >= 60) {
 		grade = "D";
+	}
 	else {
 		grade = "F";
 	}
-	System.out.println("Your final grade is: " + grade);
+	System.out.print("Your final grade is: " + grade);
 	}
-  }
-}	
+}
