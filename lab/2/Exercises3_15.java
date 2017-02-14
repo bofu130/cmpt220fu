@@ -19,43 +19,34 @@ public class Exercises3_15 {
 	
 	if (num1 == randomNum1) {
 	  if (num2 == randomNum2 && num3 == randomNum3) {
-		//System.out.print("You have win $10,000!");
 		prize = 1;
 	  }
 	  else if (num2 == randomNum3 && num3 == randomNum2) {
-		  //System.out.print("You have win $3,000!");
 		  prize = 2;
 	  }
 	  else {
-		  //System.out.print("You have win $1,000!");
 		  prize = 3;
 	  }
 	}
 	else if (num1 == randomNum2) {
 		if (num2 == randomNum1 && num3 == randomNum3) {
-			//System.out.print("You have win $3,000!");
 			prize = 2;
 		}
 		else if (num2 == randomNum3 && num3 == randomNum1) {
-			//System.out.print("You have win $3,000!");
 			prize = 2;
 		}
 		else {
-			//System.out.print("You have win $1,000!");
 			prize = 3;
 		}
 	}	
 	else if (num1 == randomNum3) {
 		if (num2 == randomNum1 && num3 == randomNum2) {
-			//System.out.print("You have win $3,000!");
 			prize = 2;
 		}
 		else if (num2 == randomNum2 && num3 == randomNum1) {
-			//System.out.print("You have win $3,000!");
 			prize = 2;
 		}
 		else {
-			//System.out.print("You have win $1,000!");
 			prize = 3;
 		}
 	}
@@ -120,7 +111,6 @@ public class Exercises3_15 {
 		}
 	}
 	else {
-		//System.out.print("You have win nothing!");
 		prize = 0;
 	}
 	
