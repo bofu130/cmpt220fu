@@ -24,17 +24,18 @@ public class Exercises6_3 {
         System.out.println(number + " is NOT a palindrome. reverse: " + reverse(number));
 
     }
-    public static int reverse(int num) {
+    public static int reverse(int number) {
+	  int i = 3;
 	  int reverse = 0;
-	  while (num != 0) {
-		reverse = reberse * 10;
-        reverse += num % 10;
-        num = num / 10;		
+	  int dig = 0;
+	  while (i > 0) {
+		dig = number % Math.pow(10, i);
+        reverse += dig;
+		i--;		
 	  }
-	  return reverse;
-	}
-	public static boolean isPalindrome(int num) {
-		if (num == reverse(num)) {
+    }  
+	public static boolean isPalindrome(int number) {
+		if (number == reverse(number)) {
 		  return true;
 		}
         else{
