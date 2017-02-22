@@ -4,7 +4,7 @@
 *course: CMPT220
 *assignment: lab_3
 *due date: Feb 21
-*version: 1.0
+*version: 1.3
 // Return the reversal of an integer, i.e., reverse(456) returns 654
 public static int reverse(int number)
 
@@ -24,16 +24,18 @@ public class Exercises6_3 {
         System.out.println(number + " is NOT a palindrome. reverse: " + reverse(number));
 
     }
+  }
     public static int reverse(int number) {
-	  int i = 3;
 	  int reverse = 0;
-	  int dig = 0;
-	  while (i > 0) {
-		dig = number % Math.pow(10, i);
-        reverse += dig;
-		i--;		
-	  }
-    }  
+	  double dig = 0.0;
+	  // get the three digit and reverse it order.
+	  int firNum = number/100;
+	  int secNum = (number % 100) / 10;
+	  int thrNum = number % 10;
+	  reverse = reverse + firNum + secNum * 10 + thrNum * 100;
+	  return reverse;  
+    }
+	
 	public static boolean isPalindrome(int number) {
 		if (number == reverse(number)) {
 		  return true;
@@ -43,5 +45,4 @@ public class Exercises6_3 {
 		}		  
 	
     }
-  }
 }
