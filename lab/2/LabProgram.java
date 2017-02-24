@@ -1,3 +1,11 @@
+/**
+*file: LabProgram.java
+*author: Bo Fu
+*course: CMPT220
+*assignment: lab_2
+*due date: February 7
+*version: 1.1
+*/
 import java.util.Scanner;
 
 public class LabProgram {

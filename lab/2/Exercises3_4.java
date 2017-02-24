@@ -1,3 +1,11 @@
+/**
+*file: Exercises3_4.java
+*author: Bo Fu
+*course: CMPT220
+*assignment: lab_2
+*due date: February 7
+*version: 1.1
+*/
 public class Exercises3_4 {
   public static void main(String[] args) {
     int randomNum = (int)(Math.random() * 12 + 1);
