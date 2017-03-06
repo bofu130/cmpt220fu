@@ -4,7 +4,7 @@
 *course: CMPT220
 *assignment: lab_3
 *due date: Feb 21
-*version: 1.0
+*version: 1.1
 */
 import java.util.Scanner;
 public class Exercises5_1 {
@@ -13,21 +13,21 @@ public class Exercises5_1 {
 		// get input
 		System.out.print("Enter an integer, the input ends if it is 0: ");
 		int num;
-        int positive = 0;
-        int negative = 0;	
-        int sum = 0;
+    int positive = 0;
+    int negative = 0;	
+    int sum = 0;
 		num = input.nextInt();
         // Loop	to get count of number	
 		do {
 		  if (num > 0) {
-			positive ++;
+			  positive ++;
 		  }	
 		  else if (num < 0) {
-			negative ++;
+			  negative ++;
 		  }
 		  else {
-			System.out.println("No number are entered except 0.");
-			System.exit(1);
+			  System.out.println("No number are entered except 0.");
+			  System.exit(1);
 			
 		}
 		sum += num;
