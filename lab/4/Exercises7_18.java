@@ -29,8 +29,8 @@ public class Exercises7_18 {
           temNum = array[j];
 		      array[j] = array[j + 1];
 		      array[j + 1] = temNum;
+	      }
+      }
 	  }
-    }
-	}
   }
 }
