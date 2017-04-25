@@ -10,11 +10,11 @@ public class Exercises6_8 {
 public static void main(String args[]) {
   System.out.println("Celsiue     Fahrenheit     |    Fahrenheit        Celsiue");
   for (double celsius = 40.0, fahrenheit = 120.0; celsius > 30.0; celsius--, fahrenheit -= 10.0) {
-	//System.out.printf("%.1f", celsius + "     " + "%.10f", fahrenheitToCelsius(fahrenheit) + "     " + "%.10f", fahrenheit + "     " + "%.10f", celsiusToFahrenheit(celsius));
+  //System.out.printf("%.1f", celsius + "     " + "%.10f", fahrenheitToCelsius(fahrenheit) + "     " + "%.10f", fahrenheit + "     " + "%.10f", celsiusToFahrenheit(celsius));
     System.out.printf("\n%.1f", celsius);
-	  System.out.printf("         %.1f", celsiusToFahrenheit(celsius));
-	  System.out.printf("               %.1f", fahrenheit);
-	  System.out.printf("               %.1f", fahrenheitToCelsius(fahrenheit));
+    System.out.printf("         %.1f", celsiusToFahrenheit(celsius));
+    System.out.printf("               %.1f", fahrenheit);
+    System.out.printf("               %.1f", fahrenheitToCelsius(fahrenheit));
     }
   }
   public static double celsiusToFahrenheit(double celsius) {

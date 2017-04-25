@@ -13,7 +13,7 @@ public class Exercises6_20 {
     System.out.print("Please enter something: ");
     String s = input.nextLine();
     System.out.print("The number of letters is: " + countLetters(s));
-	}
+  }
 
 
 public static int countLetters(String s) {
