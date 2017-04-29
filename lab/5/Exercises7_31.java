@@ -13,12 +13,12 @@ public class Exercises7_31 {
     int[] list1 = new int[6];
     System.out.print("Enter list1: ");
     for (int k = 0; k < list1.length ; k++) {
-			list1[k] = input.nextInt();
+      list1[k] = input.nextInt();
     }
     int[] list2 = new int[5];
     System.out.print("Enter list2: ");
     for (int k = 0; k < list2.length ; k++) {
-			list2[k] = input.nextInt();
+      list2[k] = input.nextInt();
     }
     int[] list3 = merge(list1, list2);
     for (int m = 0; m < list3.length; m++) {
@@ -26,11 +26,11 @@ public class Exercises7_31 {
       for (int n = 0; n < list3.length - 1; n++) {
         if (list3[n] > list3[n + 1]) {
           temNum = list3[n];
-		      list3[n] = list3[n + 1];
-		      list3[n + 1] = temNum;
-	        }
+          list3[n] = list3[n + 1];
+          list3[n + 1] = temNum;
         }
-	    }
+      }
+    }
     for (int l = 0; l < list3.length; l++) {
       System.out.print(list3[l] + " ");
     }

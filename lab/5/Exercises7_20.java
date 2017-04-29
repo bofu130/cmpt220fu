@@ -13,7 +13,7 @@ public class Exercises7_20 {
     double[] lists = new double[10];
     System.out.print("Enter 10 doubles: ");
     for (int k = 0; k < lists.length ; k++) {
-			lists[k] = input.nextDouble();
+      lists[k] = input.nextDouble();
     }
     for (int i = lists.length - 1; i >= 0; i--) {
       double currentMax = lists[i];
