@@ -1,0 +1,16 @@
+45 pts
+
+Bo,
+
+- Congratulations on coding one-dimensional convolution!
+
+However, 
+
+- The program is missing the required method and only works for integers.
+
+- Please read the assignment instructions carefully.
+
+
+Peace,
+
+- Dr. Rivas
