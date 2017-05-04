@@ -1,3 +1,11 @@
+/**
+*file: PuzzleGame.java
+*author: Bo Fu
+*course: CMPT220
+*assignment: prj_2
+*due date: April 24 2017
+*version: 3.0
+*/
 import java.util.Random;
 
 import javafx.application.Application;
@@ -28,10 +36,32 @@ public class PuzzleGame extends Application {
   public void start(Stage arg0) throws Exception {
     init(arg0);
   }
+  
+  
+  /**
+  *init:
+  *
+  * initialize the program
+  * get image and add to the imageViews
+  * add imageViews into GridPane
+  * create VBox to show Original picture and ImageView[m]
+  * add VBox to the Right of BorderPane
+  * add Button at the Bottom of BorderPane
+  * Button set event Alert("GameOver")
+  * add BorderPane into Stage
+  * set stage title "Puzzle Game"
+  * set availabe for player to change the size of window
+  * show the stage
+  *
+  *Parameter:
+  *
+  * stage
+  *
+  */
   public void init(Stage stage) {
     int[] n = random();              
     
-    Image image = new Image("a.jpg");    // change the picture here!
+    Image image = new Image("1.jpg");    // change the picture here!
 
     GridPane gridPane = new GridPane();
     
@@ -86,6 +116,16 @@ public class PuzzleGame extends Application {
   }
   
   
+  /**
+  *random():
+  * 
+  * Generate a array list length in 8 called ran[]
+  * Call iso(ran) to get inversion random number
+  *
+  *return Value:
+  * array list of number in ran[]
+  *
+  */
   public int[] random() {         //Generate Inversion sequence of number(no repeat number)
     int[] ran = new int[8];
     while(iso(ran) == false) {
@@ -95,6 +135,18 @@ public class PuzzleGame extends Application {
     
   }
   
+  
+  /**
+  *random_num():
+  * 
+  * Generate 8 number in array list ran[]
+  * random place the order of the 8 numbers
+  * make sure there is not repeat of the 8 numbers
+  *
+  *return Value:
+  * array list of random placed number in r[]
+  *
+  */
   public int[] random_num() {    //8 number without repeat
     int r[] = new int[8];
     Random random = new Random();
@@ -110,6 +162,22 @@ public class PuzzleGame extends Application {
     return r;
   }
   
+  
+  /**
+  *iso():
+  * 
+  * get the array list num[]
+  * judge if the number obey th inversion
+  * the number of inversion number should be an even number 
+  *
+  *Parameter:
+  * int[] num
+  *
+  *return Value:
+  * boolean True(if number of inversion pair is even number and not zero)
+  * boolean False(if number of inversion pair is odd)
+  *
+  */
   public boolean iso(int[] num) {    //identify the inversion pair is a even number
     int sum = 0;
     for(int i = 0; i <= 6; ++i) {
@@ -126,6 +194,19 @@ public class PuzzleGame extends Application {
     return false;
   }
   
+  
+  /**
+  *Mouse Click Event
+  * 
+  * find the location of the click image
+  * find the relationship of the image with the empty image
+  * swap the click image and the empty image(only swap if the image is near to the empty image)
+  * check after every swap, if the image is already repaired, if it is, then show the alert "Success"
+  *
+  *return Value:
+  * array list of number in ran[]
+  *
+  */
   class myevent implements EventHandler<MouseEvent> {    //Click event, judge the location of the puzzle from 4 sides of the empty one.
     @Override
     public void handle(MouseEvent arg0) {
@@ -168,6 +249,19 @@ public class PuzzleGame extends Application {
         }
       }
     }
+    
+    
+    /**
+    *swapping(image1, image2):
+    * 
+    * find the location of the two images(in xy coordinate)
+    * the x and y value are represented by the index of their Row and Column in GridPane
+    * exchange the value of x, y for both image(swap)
+    *
+    *Parameter:
+    * image i1 and image i2
+    *
+    */
     public void swapping(ImageView i1, ImageView i2) { //Swap the image
       int row1 = GridPane.getRowIndex(i1);
       int colu1 = GridPane.getColumnIndex(i1);
@@ -180,6 +274,25 @@ public class PuzzleGame extends Application {
       GridPane.setColumnIndex(i2, colu1);
     }
   }
+  
+  
+  /**
+  *issucc(imageViews):
+  * 
+  * check the location of each image in the GridPane
+  * if the picture is not in the right locaation, the value i would not be the same with its ordinal
+  * return false if not same
+  * return true if i is same with its ordinal
+  *
+  *Parameter:
+  * array list of imageViews (n[])
+  *
+  *Return Value:
+  * boolean
+  * if i == ordinal return true
+  * if not return false
+  *
+  */  
   public boolean issucc(ImageView[] imageViews) {     //judge the puzzle is in right order or not.
     for(int i = 0; i <= 8; ++i) {
       if(i != 3 * GridPane.getRowIndex(imageViews[i]) + GridPane.getColumnIndex(imageViews[i])) {
@@ -189,6 +302,21 @@ public class PuzzleGame extends Application {
     return true;
   }
   
+  
+  /**
+  *findnum(int[] n):
+  * 
+  * find the place for m(the empty image)
+  * make sure it is not included in the array list n
+  * 
+  *
+  *Parameter:
+  * array list int[] n
+  *
+  *Return Value:
+  * whcih is the value of m
+  *
+  */
   public int findnum(int[] n) {
     for(int j = 0; j <= 8; ++j) {
       if((j == n[0]) || (j == n[1]) || (j == n[2]) || (j == n[3]) || (j == n[4]) || (j == n[5]) || (j == n[6]) || (j == n[7])) {
