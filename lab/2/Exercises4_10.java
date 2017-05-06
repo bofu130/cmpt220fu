@@ -69,7 +69,7 @@ public class Exercises4_10 {
     answer = input.next().charAt(0);
 
     if (answer == 'Y' || answer == 'y')
-        day += 4;
+      day += 4;
 
     // Prompt the user to answer questions
     System.out.print("\nIs your birthday in Set4?\n");
@@ -78,7 +78,7 @@ public class Exercises4_10 {
     answer = input.next().charAt(0);
 
     if (answer == 'Y' || answer == 'y')
-        day += 8;
+      day += 8;
 
     // Prompt the user to answer questions
     System.out.print("\nIs your birthday in Set5?\n");
@@ -87,7 +87,7 @@ public class Exercises4_10 {
     answer = input.next().charAt(0);
 
     if (answer == 'Y' || answer == 'y')
-        day += 16;
+      day += 16;
 
     System.out.println("\nYour birthday is " + day + "!");
   }

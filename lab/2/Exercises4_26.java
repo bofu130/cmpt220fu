@@ -20,26 +20,26 @@ public class Exercises4_26 {
     int pos = amountS.indexOf('.');
 
     if (pos == -1) {
-        amount = Integer.parseInt(amountS);
+      amount = Integer.parseInt(amountS);
     }
-	else {
-        System.out.println("I am here");
-        String dollars = amountS.substring(0, pos);
-        String cents = amountS.substring(pos + 1);
+    else {
+      System.out.println("I am here");
+      String dollars = amountS.substring(0, pos);
+      String cents = amountS.substring(pos + 1);
 
-        System.out.println(dollars);
-        System.out.println(cents);
+      System.out.println(dollars);
+      System.out.println(cents);
         
-		switch (cents.length()) {
-          case 1: cents += "0"; 
-		          break;
-          case 2: cents = cents.substring(0,2);
-          		  break;
-          default:  cents += "00";
-            }
-        amount = Integer.parseInt(dollars +cents);
-        System.out.println(Integer.parseInt(dollars + cents));
-        }
+      switch (cents.length()) {
+        case 1: cents += "0"; 
+          break;
+        case 2: cents = cents.substring(0,2);
+          break;
+        default:  cents += "00";
+      }
+      amount = Integer.parseInt(dollars +cents);
+      System.out.println(Integer.parseInt(dollars + cents));
+    }
 
     int remainingAmount = amount;
 
