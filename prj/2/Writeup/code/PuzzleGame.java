@@ -99,7 +99,7 @@ public class PuzzleGame extends Application {
     button.setOnAction(new EventHandler<ActionEvent>() {   //A button click event.
     @Override
     public void handle(ActionEvent event) {
-      Alert alert = new Alert(AlertType.WARNING, "Game Over£¡");
+      Alert alert = new Alert(AlertType.WARNING, "Game Over");
       alert.show();
       }
     });

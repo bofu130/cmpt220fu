@@ -1,0 +1,11 @@
+39 pts
+
+The project attempts to design an application program of puzzle game.
+The idea has good merit. 
+
+However, there are some issues...
+Writeup:
+- There are typos in the document. -1pt
+
+Overall:
+- Decent work above average of an SD1 student.
